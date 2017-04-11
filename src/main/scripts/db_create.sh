@@ -2,7 +2,7 @@
 CSV_FILE_NAME=supported_devices.csv
 GOOGLE_SUPPORTED_DEVICES_URL=http://storage.googleapis.com/play_public/supported_devices.csv
 SQLITE_DB_NAME=supported_devices.sql3
-SQLITE_DB=../assets/$SQLITE_DB_NAME
+SQLITE_DB=../assets/databases/$SQLITE_DB_NAME
 # downlaod the CSV file from the official google support site.
 wget -O $CSV_FILE_NAME $GOOGLE_SUPPORTED_DEVICES_URL
 
@@ -20,6 +20,7 @@ while IFS=,$'\t\n\r' read Brand Name Device Model
 do
 	test $i -eq 1 && ((i=i+1)) && continue
 	
+	# We need to remove single and double quotes. We also remove those when comparing against the DB.
 	Brand=${Brand//[\'\"\`]}
 	Name=${Name//[\'\"\`]}
 	Device=${Device//[\'\"\`]}

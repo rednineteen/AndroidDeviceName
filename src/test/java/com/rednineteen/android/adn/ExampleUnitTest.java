@@ -1,4 +1,4 @@
-package com.rednineteen.android.devicename;
+package com.rednineteen.android.adn;
 
 import org.junit.Test;
 

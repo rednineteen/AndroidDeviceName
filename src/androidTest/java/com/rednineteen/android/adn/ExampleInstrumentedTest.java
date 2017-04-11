@@ -1,4 +1,4 @@
-package com.rednineteen.android.devicename;
+package com.rednineteen.android.adn;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
