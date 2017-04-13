@@ -30,3 +30,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
 }
+
+task clearData(type: Exec) {
+    def clearDataCommand = ['adb', 'shell', 'pm', 'clear', 'com.rednineteen.android.adn.test']
+    commandLine clearDataCommand
+}
