@@ -1,5 +1,5 @@
 # AndroidDeviceName
-[![License](http://img.shields.io/:license-apache-blue.svg)](LICENSE.txt)
+[![License](http://img.shields.io/:license-apache-blue.svg)](LICENSE)
 
 This is a small library to get the marketing name for an Android device.
 It is based on the Google supported devices list found [here](http://storage.googleapis.com/play_public/supported_devices.csv.)
