@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.text.TextUtils;
-
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 /**
@@ -118,7 +117,7 @@ public class ADNDatabase extends SQLiteAssetHelper {
     /**
      * Returns the market name of the current device or returns the value of Build.MODEL if not found.
      *
-     * @return
+     * @return String with the current device market name
      */
     public static String getDeviceName() {
         return getDeviceName(Build.MODEL, Build.MODEL, false);
@@ -129,7 +128,7 @@ public class ADNDatabase extends SQLiteAssetHelper {
      *
      * @param model The model as given by Build.MODEL
      * @param fallback Fallback string name to be returned it no name was found
-     * @return
+     * @return String with the current device market name
      */
     public static String getDeviceName(String model, String fallback) {
         return getDeviceName(model, fallback, false);
@@ -142,7 +141,7 @@ public class ADNDatabase extends SQLiteAssetHelper {
      * @param model The model as given by Build.MODEL
      * @param fallback Fallback string name to be returned it no name was found
      * @param withBrand If true it will return also the Brand name concatenated with the market name. If false it will return market name only.
-     * @return
+     * @return String with the current device market name
      */
     public static String getDeviceName(String model, String fallback, boolean withBrand) {
         return getDeviceName(model, null, fallback, withBrand);
@@ -156,7 +155,7 @@ public class ADNDatabase extends SQLiteAssetHelper {
      * @param codename The codename as given by Build.DEVICE
      * @param fallback Fallback string name to be returned it no name was found
      * @param withBrand If true it will return also the Brand name concatenated with the market name. If false it will return market name only.
-     * @return
+     * @return String with the current device market name
      */
     public static String getDeviceName(String model, String codename, String fallback, boolean withBrand) {
         ADNDevice d = getDevice(model, codename);
