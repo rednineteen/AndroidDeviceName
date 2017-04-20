@@ -1,5 +1,5 @@
 # AndroidDeviceName
-[![License](http://img.shields.io/:license-apache-blue.svg)](LICENSE)
+[![License](http://img.shields.io/:license-apache-blue.svg)](LICENSE) [ ![Download](https://api.bintray.com/packages/red19/Android/com.rednineteen.android%3Aadn/images/download.svg) ](https://bintray.com/red19/Android/com.rednineteen.android%3Aadn/_latestVersion)
 
 This is a small library to get the marketing name for an Android device.
 It is based on the Google supported devices list found [here](http://storage.googleapis.com/play_public/supported_devices.csv.)
@@ -11,9 +11,14 @@ It converts the **android.os.Build.MODEL** value into the device market name bas
 * Add the library dependency in your **build.gradle**
 
 ```
-    compile 'com.rednineteen.android:adn:1.0.0'
+    compile 'com.rednineteen.android:adn:1.+'
 ```
 
+Make sure you have the **jcenter()** reporistory in your root build.gradle
+
+    repositories {
+        jcenter()
+    }
 * Initialise the library by calling the below in your Application or main Activity `"onCreate()"` method
 
 ```java
@@ -87,6 +92,13 @@ You can open the DB on the onStart() method of your activity and make sure to cl
 ## Documentation
 
 For more documentation please check the [wiki](https://github.com/rednineteen/AndroidDeviceName/wiki/Documentation)
+
+#### Deploy library to jcenter
+
+Run below gradle tasks.
+
+    gradlew install
+    gradlew bintrayUpload
 
 ## License
 
