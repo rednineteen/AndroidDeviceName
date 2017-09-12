@@ -2,7 +2,7 @@
 [![License](http://img.shields.io/:license-apache-blue.svg)](LICENSE) [ ![Download](https://api.bintray.com/packages/red19/Android/com.rednineteen.android%3Aadn/images/download.svg) ](https://bintray.com/red19/Android/com.rednineteen.android%3Aadn/_latestVersion)
 
 This is a small library to get the marketing name for an Android device.
-It is based on the Google supported devices list found [here](http://storage.googleapis.com/play_public/supported_devices.csv.)
+It is based on the Google supported devices list found [here](https://support.google.com/googleplay/android-developer/answer/6154891?hl=en)
 
 It converts the **android.os.Build.MODEL** value into the device market name based on the above list. For example translates `"SM-G930F"` into `"Galaxy S7"`
 
